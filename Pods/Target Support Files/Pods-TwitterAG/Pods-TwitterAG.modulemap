@@ -1,0 +1,6 @@
+framework module Pods_TwitterAG {
+  umbrella header "Pods-TwitterAG-umbrella.h"
+
+  export *
+  module * { export * }
+}
