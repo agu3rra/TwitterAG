@@ -10,8 +10,19 @@ import LBTAComponents
 
 class HomeDatasource: Datasource {
     
+    let words = ["Hey", "there!", "Howdy?"]
+    
     override func item(_ indexPath: IndexPath) -> Any? {
-        return self.objects?[indexPath.item]
+//        return self.objects?[indexPath.item]
+        return words[indexPath.item]
+    }
+    
+    override func numberOfItems(_ section: Int) -> Int {
+        return words.count
+    }
+    
+    override func cellClasses() -> [DatasourceCell.Type] {
+        return [UserCell.self]
     }
     
     override func headerClasses() -> [DatasourceCell.Type]? {

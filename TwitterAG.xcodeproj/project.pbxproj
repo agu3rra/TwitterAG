@@ -11,6 +11,7 @@
 		2D4D715A1FFF714000706DC7 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D71591FFF714000706DC7 /* UserHeader.swift */; };
 		2D4D715C1FFF714A00706DC7 /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D715B1FFF714A00706DC7 /* UserFooter.swift */; };
 		2D4D715E1FFF716A00706DC7 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D715D1FFF716A00706DC7 /* HomeDatasource.swift */; };
+		2D4D71631FFF742B00706DC7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D71621FFF742B00706DC7 /* UserCell.swift */; };
 		2DA7A56E1FFC0EE500231FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7A56D1FFC0EE500231FEC /* AppDelegate.swift */; };
 		2DA7A5751FFC0EE500231FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA7A5741FFC0EE500231FEC /* Assets.xcassets */; };
 		2DA7A5781FFC0EE500231FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA7A5761FFC0EE500231FEC /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 		2D4D71591FFF714000706DC7 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
 		2D4D715B1FFF714A00706DC7 /* UserFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
 		2D4D715D1FFF716A00706DC7 /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		2D4D71621FFF742B00706DC7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		2DA7A56A1FFC0EE500231FEC /* TwitterAG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterAG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA7A56D1FFC0EE500231FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA7A5741FFC0EE500231FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +48,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4D715F1FFF730900706DC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D4D71591FFF714000706DC7 /* UserHeader.swift */,
+				2D4D71621FFF742B00706DC7 /* UserCell.swift */,
+				2D4D715B1FFF714A00706DC7 /* UserFooter.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D4D71601FFF731200706DC7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D4D71611FFF731700706DC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D4D715D1FFF716A00706DC7 /* HomeDatasource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2DA7A5611FFC0EE500231FEC = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +96,10 @@
 		2DA7A56C1FFC0EE500231FEC /* TwitterAG */ = {
 			isa = PBXGroup;
 			children = (
+				2D4D71611FFF731700706DC7 /* Model */,
+				2D4D715F1FFF730900706DC7 /* View */,
+				2D4D71601FFF731200706DC7 /* Controller */,
 				2DA7A56D1FFC0EE500231FEC /* AppDelegate.swift */,
-				2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */,
-				2D4D715D1FFF716A00706DC7 /* HomeDatasource.swift */,
-				2D4D71591FFF714000706DC7 /* UserHeader.swift */,
-				2D4D715B1FFF714A00706DC7 /* UserFooter.swift */,
 				2DA7A5741FFC0EE500231FEC /* Assets.xcassets */,
 				2DA7A5761FFC0EE500231FEC /* LaunchScreen.storyboard */,
 				2DA7A5791FFC0EE500231FEC /* Info.plist */,
@@ -228,6 +255,7 @@
 			files = (
 				2D4D715E1FFF716A00706DC7 /* HomeDatasource.swift in Sources */,
 				2DA7A56E1FFC0EE500231FEC /* AppDelegate.swift in Sources */,
+				2D4D71631FFF742B00706DC7 /* UserCell.swift in Sources */,
 				2D4D715C1FFF714A00706DC7 /* UserFooter.swift in Sources */,
 				2D29EE091FFE9EBA00181FF9 /* HomeDatasourceController.swift in Sources */,
 				2D4D715A1FFF714000706DC7 /* UserHeader.swift in Sources */,
