@@ -15,20 +15,25 @@ class UserHeader: DatasourceCell {
     }
 }
 
+class UserFooter: DatasourceCell {
+    override func setupViews() {
+        super.setupViews()
+        self.backgroundColor = UIColor.orange
+    }
+}
+
 class HomeDatasource: Datasource {
     
-    let words: Datasource = {
-       let datasource = Datasource()
-        datasource.objects = ["Good morning","Mr.","War!",]
-        return datasource
-    }()
-    
     override func item(_ indexPath: IndexPath) -> Any? {
-        return words.objects?[indexPath.item]
+        return self.objects?[indexPath.item]
     }
     
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
+    }
+    
+    override func footerClasses() -> [DatasourceCell.Type]? {
+        return [UserFooter.self]
     }
 }
 
@@ -36,11 +41,15 @@ class HomeDatasourceController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let datasource = HomeDatasource()
-        self.datasource = datasource.words
+        self.datasource = HomeDatasource()
+        self.datasource?.objects = ["Good morning","Mr.","War!"]
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 50)
     }
 }
