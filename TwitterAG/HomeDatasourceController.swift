@@ -8,35 +8,6 @@
 
 import LBTAComponents
 
-class UserHeader: DatasourceCell {
-    override func setupViews() {
-        super.setupViews()
-        self.backgroundColor = .blue
-    }
-}
-
-class UserFooter: DatasourceCell {
-    override func setupViews() {
-        super.setupViews()
-        self.backgroundColor = UIColor.orange
-    }
-}
-
-class HomeDatasource: Datasource {
-    
-    override func item(_ indexPath: IndexPath) -> Any? {
-        return self.objects?[indexPath.item]
-    }
-    
-    override func headerClasses() -> [DatasourceCell.Type]? {
-        return [UserHeader.self]
-    }
-    
-    override func footerClasses() -> [DatasourceCell.Type]? {
-        return [UserFooter.self]
-    }
-}
-
 class HomeDatasourceController: DatasourceController {
 
     override func viewDidLoad() {
