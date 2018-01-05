@@ -10,4 +10,5 @@ import UIKit
 
 class Colors: NSObject {
     public static let twitterBlue = UIColor(r: 61, g: 167, b: 244)
+    public static let separator = UIColor(r: 230, g: 230, b: 230)
 }

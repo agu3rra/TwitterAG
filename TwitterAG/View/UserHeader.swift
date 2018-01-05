@@ -20,6 +20,9 @@ class UserHeader: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = Colors.separator
+        
         addSubview(textLabel)
 //        textLabel.fillSuperview() // the cell fills the entire space
         textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)

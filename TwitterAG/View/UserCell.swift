@@ -13,7 +13,11 @@ class UserCell: DatasourceCell {
     /// Accesses items in the HomeDatasource
     override var datasourceItem: Any? {
         didSet {
-            nameLabel.text = datasourceItem as? String
+            guard let user = datasourceItem as? User else {return}
+            nameLabel.text = user.name
+            usernameLabel.text = user.username
+            userBio.text = user.bioText
+            profileImage.image = user.profileImage
         }
     }
     
@@ -66,6 +70,10 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        // Adds separator lines
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = Colors.separator
         
         // adds all items that will be contained in the user cell
         addSubview(nameLabel)
