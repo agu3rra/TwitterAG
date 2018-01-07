@@ -36,10 +36,16 @@ class HomeDatasourceController: DatasourceController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 1 {
+            return .zero
+        }
         return CGSize(width: view.frame.width, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+        if section == 1 { // if we're rendering the second section.
+            return .zero
+        }
+        return CGSize(width: view.frame.width, height: 64)
     }
 }

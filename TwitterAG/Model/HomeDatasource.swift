@@ -17,17 +17,22 @@ class HomeDatasource: Datasource {
         return [andre, elon, brian]
     }()
     
+    let tweets = ["Tweet 1","Tweet 2"]
+    
     override func item(_ indexPath: IndexPath) -> Any? {
 //        return self.objects?[indexPath.item]
         return users[indexPath.item]
     }
     
     override func numberOfItems(_ section: Int) -> Int {
+        if section == 1 {
+            return tweets.count
+        }
         return users.count
     }
     
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [UserCell.self]
+        return [UserCell.self, TweetCell.self] // just add the type of cells you need on different sections.
     }
     
     override func headerClasses() -> [DatasourceCell.Type]? {
@@ -36,5 +41,10 @@ class HomeDatasource: Datasource {
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
+    }
+    
+    // This is where we can create separate sections of the app. In the case of twitter, a section for displaying Who to follow and another for recent Tweets.
+    override func numberOfSections() -> Int {
+        return 2
     }
 }
