@@ -17,10 +17,17 @@ class HomeDatasource: Datasource {
         return [andre, elon, brian]
     }()
     
-    let tweets = ["Tweet 1","Tweet 2"]
+    let tweets: [Tweet] = {
+        let andre = User(name: "Andre Guerra", username: "@agu3rra", bioText: "Father. Knowledge seeker. Engineer. Self taught programmer. Yoga enthusiast. Runner.", profileImage: #imageLiteral(resourceName: "profile_image") )
+        let tweet1 = Tweet(user: andre, message: "This is supposed to be a long text for a demo of how a tweet message is supposed to be rendered in this app.")
+        let tweet2 = Tweet(user: andre, message: "Yet another message I just have to keep writing text to. The point here is to have some text to return to our app view.")
+        return [tweet1, tweet2]
+    }()
     
     override func item(_ indexPath: IndexPath) -> Any? {
-//        return self.objects?[indexPath.item]
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     
