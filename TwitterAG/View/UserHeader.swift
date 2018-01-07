@@ -19,6 +19,7 @@ class UserHeader: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        self.backgroundColor = .white
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = Colors.separator

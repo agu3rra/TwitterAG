@@ -12,6 +12,8 @@ class HomeDatasourceController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView?.backgroundColor = Colors.twitterBackground
+        setupNavigationBarItems()
         self.datasource = HomeDatasource()
     }
     

@@ -70,6 +70,7 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        self.backgroundColor = .white
         
         // Adds separator lines
         separatorLineView.isHidden = false
