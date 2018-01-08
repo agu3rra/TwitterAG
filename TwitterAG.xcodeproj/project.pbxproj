@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D19D97D2003E08700D54E52 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19D97C2003E08700D54E52 /* Service.swift */; };
+		2D19D97F2003E44600D54E52 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D19D97E2003E44600D54E52 /* MobileCoreServices.framework */; };
 		2D29EE091FFE9EBA00181FF9 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */; };
 		2D4D715A1FFF714000706DC7 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D71591FFF714000706DC7 /* UserHeader.swift */; };
 		2D4D715C1FFF714A00706DC7 /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D715B1FFF714A00706DC7 /* UserFooter.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0D38812CAA12D80686E0EFDC /* Pods_TwitterAG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterAG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D19D97C2003E08700D54E52 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2D19D97E2003E44600D54E52 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		2D4D71591FFF714000706DC7 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
 		2D4D715B1FFF714A00706DC7 /* UserFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D19D97F2003E44600D54E52 /* MobileCoreServices.framework in Frameworks */,
 				E522AE95BBAC925EFCCCAA78 /* Pods_TwitterAG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +139,7 @@
 		57F0CB735F1CB43881C9D8D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D19D97E2003E44600D54E52 /* MobileCoreServices.framework */,
 				0D38812CAA12D80686E0EFDC /* Pods_TwitterAG.framework */,
 			);
 			name = Frameworks;

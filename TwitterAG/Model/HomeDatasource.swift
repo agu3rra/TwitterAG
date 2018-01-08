@@ -13,30 +13,17 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
+    let tweets: [Tweet]
     
     required init(json: JSON) throws {
-        var users = [User]()
+        // Loading users
+        let usersJsonArray = json["users"].array
+        self.users = usersJsonArray!.map({return User(json: $0)}) // $0 represents the element on each iteration of the usersJsonArray
         
-        // Data massage:
-        let array = json["users"].array
-        for userJson in array! {
-            let name = userJson["name"].stringValue
-            let username = userJson["username"].stringValue
-            let bio = userJson["bio"].stringValue
-            
-            let currentUser = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            
-            users.append(currentUser)
-        }
-        self.users = users
+        // Loading tweets
+        let tweetsJsonArray = json["tweets"].array
+        self.tweets = tweetsJsonArray!.map({return Tweet(json: $0)})
     }
-    
-    let tweets: [Tweet] = {
-        let andre = User(name: "Andre Guerra", username: "@agu3rra", bioText: "Father. Knowledge seeker. Engineer. Self taught programmer. Yoga enthusiast. Runner.", profileImage: #imageLiteral(resourceName: "profile_image") )
-        let tweet1 = Tweet(user: andre, message: "This is supposed to be a long text for a demo of how a tweet message is supposed to be rendered in this app.")
-        let tweet2 = Tweet(user: andre, message: "Yet another message I just have to keep writing text to. The point here is to have some text to return to our app view.")
-        return [tweet1, tweet2]
-    }()
     
     override func item(_ indexPath: IndexPath) -> Any? {
         if indexPath.section == 1 {
