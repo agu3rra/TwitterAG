@@ -16,13 +16,13 @@ class HomeDatasource: Datasource, JSONDecodable {
     let tweets: [Tweet]
     
     required init(json: JSON) throws {
-        // Loading users
-        let usersJsonArray = json["users"].array
-        self.users = usersJsonArray!.map({return User(json: $0)}) // $0 represents the element on each iteration of the usersJsonArray
-        
-        // Loading tweets
-        let tweetsJsonArray = json["tweets"].array
-        self.tweets = tweetsJsonArray!.map({return Tweet(json: $0)})
+        // Loading users and tweets
+        guard let usersJsonArray = json["users"].array,
+            let tweetsJsonArray = json["tweets"].array else {
+            throw NSError(domain: "AG.TwitterAG", code: 1, userInfo: [NSLocalizedDescriptionKey: "Invalid data format in JSON."])
+        }
+        self.users = usersJsonArray.map({return User(json: $0)}) // $0 represents the element on each iteration of the usersJsonArray
+        self.tweets = tweetsJsonArray.map({return Tweet(json: $0)})
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {

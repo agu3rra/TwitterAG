@@ -12,6 +12,15 @@ import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
 
+    let errorMessageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Apologies. Something went wrong. Please check your network connectivity and try again later."
+        label.textAlignment = NSTextAlignment.center
+        label.numberOfLines = 0 // jump lines as required.
+        label.isHidden = true
+        return label
+    }()
+    
     // This is called every time the device is rotated.
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         self.collectionViewLayout.invalidateLayout() // executed view layout again.
@@ -19,10 +28,28 @@ class HomeDatasourceController: DatasourceController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Error message label
+        view.addSubview(errorMessageLabel)
+        errorMessageLabel.fillSuperview() // LBTA method call
+
+        // Loading data
         self.collectionView?.backgroundColor = Colors.twitterBackground
         setupNavigationBarItems()
 //        self.datasource = HomeDatasource()
-        Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
+        Service.sharedInstance.fetchHomeFeed { (homeDatasource, error) in
+            if let error = error {
+                self.errorMessageLabel.isHidden = false
+//                print("HomeDatasourceController error fetching json: ", error)
+                if let apiError = error as? APIError<Service.JSONError> {
+                    if apiError.response?.statusCode != 200 { // Network error
+                        self.errorMessageLabel.text = "Connectivity issue. Please check your network connection and try again later."
+                    } else {
+                        self.errorMessageLabel.text = "Something went wrong. Please try again later."
+                    }
+                }
+                return
+            }
             self.datasource = homeDatasource
         }
     }

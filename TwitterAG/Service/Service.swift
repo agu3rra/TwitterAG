@@ -22,14 +22,15 @@ struct Service {
         }
     }
     
-    public func fetchHomeFeed(completion: @escaping (HomeDatasource) -> ()){
+    public func fetchHomeFeed(completion: @escaping (HomeDatasource?, Error?) -> ()){
         // Start JSON fetch
         
         let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("twitter/home")// this is my first use of Generics
         
         request.perform(withSuccess: { (homeDatasource) in
-            completion(homeDatasource)
+            completion(homeDatasource, nil)
         }) { (error) in
+            completion(nil, error)
             print("Failed to fetch JSON.", error)
         }
     }
