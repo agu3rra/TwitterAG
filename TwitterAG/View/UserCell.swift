@@ -24,6 +24,7 @@ class UserCell: DatasourceCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = UIColor.black
         return label
     }()
     

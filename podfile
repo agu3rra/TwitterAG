@@ -1,4 +1,5 @@
 target 'TwitterAG' do
 use_frameworks!
 pod 'LBTAComponents', '~> 1.0.0'
+pod 'TRON', '~> 4.0'
 end

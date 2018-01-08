@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
 
@@ -19,7 +21,28 @@ class HomeDatasourceController: DatasourceController {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = Colors.twitterBackground
         setupNavigationBarItems()
-        self.datasource = HomeDatasource()
+//        self.datasource = HomeDatasource()
+        self.fetchHomeFeed()
+    }
+    
+    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
+    
+    class JSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            print("JSON error.")
+        }
+    }
+    
+    fileprivate func fetchHomeFeed(){
+        // Start JSON fetch
+        
+        let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("twitter/home")// this is my first use of Generics
+        
+        request.perform(withSuccess: { (homeDatasource) in
+            self.datasource = homeDatasource
+        }) { (error) in
+            print("Failed to fetch JSON.", error)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
