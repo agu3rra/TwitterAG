@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D19D97D2003E08700D54E52 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19D97C2003E08700D54E52 /* Service.swift */; };
 		2D29EE091FFE9EBA00181FF9 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */; };
 		2D4D715A1FFF714000706DC7 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D71591FFF714000706DC7 /* UserHeader.swift */; };
 		2D4D715C1FFF714A00706DC7 /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D715B1FFF714A00706DC7 /* UserFooter.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0D38812CAA12D80686E0EFDC /* Pods_TwitterAG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterAG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D19D97C2003E08700D54E52 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		2D4D71591FFF714000706DC7 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
 		2D4D715B1FFF714A00706DC7 /* UserFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D19D97B2003E07900D54E52 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2D19D97C2003E08700D54E52 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		2D4D715F1FFF730900706DC7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		2DA7A56C1FFC0EE500231FEC /* TwitterAG */ = {
 			isa = PBXGroup;
 			children = (
+				2D19D97B2003E07900D54E52 /* Service */,
 				2D4D71611FFF731700706DC7 /* Model */,
 				2D4D715F1FFF730900706DC7 /* View */,
 				2D4D71601FFF731200706DC7 /* Controller */,
@@ -279,6 +290,7 @@
 				2DCAC8C42002A68A001AC717 /* HomeDataSourceControllerExtensions.swift in Sources */,
 				2D4D71672000188D00706DC7 /* Colors.swift in Sources */,
 				2D4D71631FFF742B00706DC7 /* UserCell.swift in Sources */,
+				2D19D97D2003E08700D54E52 /* Service.swift in Sources */,
 				2D4D716920001DCE00706DC7 /* User.swift in Sources */,
 				2D4D715C1FFF714A00706DC7 /* UserFooter.swift in Sources */,
 				2DCAC8C62002A9FB001AC717 /* TweetCell.swift in Sources */,
