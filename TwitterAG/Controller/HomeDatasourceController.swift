@@ -10,6 +10,11 @@ import LBTAComponents
 
 class HomeDatasourceController: DatasourceController {
 
+    // This is called every time the device is rotated.
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        self.collectionViewLayout.invalidateLayout() // executed view layout again.
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = Colors.twitterBackground
