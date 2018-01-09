@@ -10,4 +10,4 @@ This is a recreation of the Twitter app view based on a tutorial taken from Lets
 The tutorial doesn't cover the Social Framework in order to connect to a Twitter account.
 
 ## Simulator Screenshot
-
+![](Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12)
