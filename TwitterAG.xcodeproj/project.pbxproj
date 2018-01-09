@@ -23,6 +23,7 @@
 		2DCAC8C42002A68A001AC717 /* HomeDataSourceControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAC8C32002A68A001AC717 /* HomeDataSourceControllerExtensions.swift */; };
 		2DCAC8C62002A9FB001AC717 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAC8C52002A9FB001AC717 /* TweetCell.swift */; };
 		2DCAC8C82002AF2E001AC717 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAC8C72002AF2E001AC717 /* Tweet.swift */; };
+		2DE05DE720044FB600ABB38B /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 2DE05DE620044FB600ABB38B /* README.MD */; };
 		E522AE95BBAC925EFCCCAA78 /* Pods_TwitterAG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D38812CAA12D80686E0EFDC /* Pods_TwitterAG.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		2DCAC8C32002A68A001AC717 /* HomeDataSourceControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceControllerExtensions.swift; sourceTree = "<group>"; };
 		2DCAC8C52002A9FB001AC717 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		2DCAC8C72002AF2E001AC717 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		2DE05DE620044FB600ABB38B /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		DA773938C868648825F68677 /* Pods-TwitterAG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterAG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterAG/Pods-TwitterAG.debug.xcconfig"; sourceTree = "<group>"; };
 		E85066C4BDB7596D4B874418 /* Pods-TwitterAG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterAG.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterAG/Pods-TwitterAG.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		2DA7A5611FFC0EE500231FEC = {
 			isa = PBXGroup;
 			children = (
+				2DE05DE620044FB600ABB38B /* README.MD */,
 				2DA7A5811FFC2D0400231FEC /* podfile */,
 				2DA7A56C1FFC0EE500231FEC /* TwitterAG */,
 				2DA7A56B1FFC0EE500231FEC /* Products */,
@@ -218,6 +221,7 @@
 			files = (
 				2DA7A5821FFC2D0400231FEC /* podfile in Resources */,
 				2DA7A5781FFC0EE500231FEC /* LaunchScreen.storyboard in Resources */,
+				2DE05DE720044FB600ABB38B /* README.MD in Resources */,
 				2DA7A5751FFC0EE500231FEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
