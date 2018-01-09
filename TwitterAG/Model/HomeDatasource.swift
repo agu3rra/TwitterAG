@@ -10,6 +10,12 @@ import LBTAComponents
 import TRON
 import SwiftyJSON
 
+extension Collection where Iterator.Element == JSON {
+    func decode<T: JSONDecodable>() throws -> [T] { // the use of this Generic type, eliminates the need of casting. It simply returns an object of the same type that was used to call this function.
+        return try map({try T(json: $0)})
+    }
+}
+
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
@@ -21,8 +27,11 @@ class HomeDatasource: Datasource, JSONDecodable {
             let tweetsJsonArray = json["tweets"].array else {
             throw NSError(domain: "AG.TwitterAG", code: 1, userInfo: [NSLocalizedDescriptionKey: "Invalid data format in JSON."])
         }
-        self.users = usersJsonArray.map({return User(json: $0)}) // $0 represents the element on each iteration of the usersJsonArray
-        self.tweets = tweetsJsonArray.map({return Tweet(json: $0)})
+//        self.users = usersJsonArray.map({return User(json: $0)}) // $0 represents the element on each iteration of the usersJsonArray
+//        self.tweets = tweetsJsonArray.map({return Tweet(json: $0)})
+        
+        self.users = try usersJsonArray.decode()
+        self.tweets = try tweetsJsonArray.decode()
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
