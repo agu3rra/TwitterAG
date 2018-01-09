@@ -59,17 +59,24 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if let user = self.datasource?.item(indexPath) as? User {
+        if indexPath.section == 0 { // users section
+            guard let user = self.datasource?.item(indexPath) as? User else {return .zero}
             // estimate cell size based on user bio text
-            let approximateWidthOfBioText = view.frame.width - 50 - 12 - 12 - 2
-            let size = CGSize(width: approximateWidthOfBioText, height: 1000)
-            let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
-            
-            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
-            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
+            return CGSize(width: view.frame.width, height: estimatedHeightForText(user.bioText) + 66)
         }
-        return CGSize(width: view.frame.width, height: 200)
+        else { // tweets section
+            guard let tweet = datasource?.item(indexPath) as? Tweet else {return .zero} // returns zero width, zero height
+            return CGSize(width: view.frame.width, height: estimatedHeightForText(tweet.message) + 74)
+        }
+    }
+    
+    private func estimatedHeightForText(_ text: String) -> CGFloat {
+        let approximateWidthOfBioText = view.frame.width - 50 - 12 - 12 - 2
+        let size = CGSize(width: approximateWidthOfBioText, height: 1000)
+        let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+        
+        let estimatedFrame = NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return estimatedFrame.height
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
