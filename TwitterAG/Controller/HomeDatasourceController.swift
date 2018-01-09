@@ -23,7 +23,7 @@ class HomeDatasourceController: DatasourceController {
     
     // This is called every time the device is rotated.
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        self.collectionViewLayout.invalidateLayout() // executed view layout again.
+        self.collectionViewLayout.invalidateLayout() // executes view layout again.
     }
     
     override func viewDidLoad() {

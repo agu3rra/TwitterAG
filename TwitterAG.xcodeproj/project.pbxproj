@@ -10,6 +10,7 @@
 		2D19D97D2003E08700D54E52 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19D97C2003E08700D54E52 /* Service.swift */; };
 		2D19D97F2003E44600D54E52 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D19D97E2003E44600D54E52 /* MobileCoreServices.framework */; };
 		2D29EE091FFE9EBA00181FF9 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */; };
+		2D2B63F62004534800CDCAAA /* Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2B63F52004534800CDCAAA /* Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12.png */; };
 		2D4D715A1FFF714000706DC7 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D71591FFF714000706DC7 /* UserHeader.swift */; };
 		2D4D715C1FFF714A00706DC7 /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D715B1FFF714A00706DC7 /* UserFooter.swift */; };
 		2D4D715E1FFF716A00706DC7 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D715D1FFF716A00706DC7 /* HomeDatasource.swift */; };
@@ -32,6 +33,7 @@
 		2D19D97C2003E08700D54E52 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2D19D97E2003E44600D54E52 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2D29EE081FFE9EBA00181FF9 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		2D2B63F52004534800CDCAAA /* Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12.png"; sourceTree = "<group>"; };
 		2D4D71591FFF714000706DC7 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
 		2D4D715B1FFF714A00706DC7 /* UserFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
 		2D4D715D1FFF716A00706DC7 /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE05DE620044FB600ABB38B /* README.MD */,
+				2D2B63F52004534800CDCAAA /* Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12.png */,
 				2DA7A5811FFC2D0400231FEC /* podfile */,
 				2DA7A56C1FFC0EE500231FEC /* TwitterAG */,
 				2DA7A56B1FFC0EE500231FEC /* Products */,
@@ -219,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D2B63F62004534800CDCAAA /* Simulator Screen Shot - iPhone 7 - 2018-01-08 at 23.32.12.png in Resources */,
 				2DA7A5821FFC2D0400231FEC /* podfile in Resources */,
 				2DA7A5781FFC0EE500231FEC /* LaunchScreen.storyboard in Resources */,
 				2DE05DE720044FB600ABB38B /* README.MD in Resources */,
